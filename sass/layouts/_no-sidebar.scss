@@ -1,0 +1,16 @@
+.no-sidebar {
+
+	.site {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-areas:
+			"header"
+			"main"
+			"footer";
+	}
+}
+
+
+.site-branding, #primary, #colophon{
+	margin: 3rem;
+}
