@@ -50,9 +50,9 @@
 		<?php
 		if ( is_front_page() ) : ?>
 	<section class="caroussel">
-	<div>1</div>
-	<div>2</div>
-	<div>3</div>
+	<div></div>
+	<div></div>
+	<div></div>
 	</section>
 	<button id='un'>1</button>
 	<button id='deux'>2</button>
@@ -62,9 +62,9 @@
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" > 
 			 <section id="burger">
-       				<div><img src="eren.png"></div>
-     			   <div><img src="levi.png"></div>
-     			   <div class='ouvrirX3'><img src="mikasa.png"></div>
+       				<div></div>
+     			   <div></div>
+     			   <div class='ouvrirX3'></div>
 				</section>
 	
 </button> 

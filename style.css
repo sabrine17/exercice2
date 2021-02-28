@@ -1238,13 +1238,22 @@ body.home::after {
 
 .caroussel div:nth-of-type(1) {
   background-color: #8dbde9;
+  opacity: .5;
+  background-image: url(eren.png);
+  background-size: 13vw;
 }
 
 .caroussel div:nth-of-type(2) {
-  background-color: #9900ff;
+  background-color: #6d5db0;
+  opacity: .5;
+  background-image: url(levi.png);
+  background-size: 13vw;
 }
 
 .caroussel div:nth-of-type(3) {
   background-color: blue;
+  opacity: .5;
+  background-image: url(mikasa.png);
+  background-size: 13vw;
 }
 /*# sourceMappingURL=style.css.map */
