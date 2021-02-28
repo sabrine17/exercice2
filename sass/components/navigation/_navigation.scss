@@ -271,4 +271,31 @@ MENU TABLETTE
   .fermeX2 {
 	animation: fermeX2 0.1s both;
   }
+
+
+
+  /*--------------------ANIMATION TITRE -------------------------*/
+
+
+
+
+@keyframes animatetitle{
+0%{
+	transform :translateY(-500px) ;
+	
+}
+50%{
+	transform :translateY(50px) scaleY(2) ;
+	
+}
+100%{
+	transform : scaleY(1) ;
+
+}
+}
+
+.site-title{
+animation: animatetitle 4s;
+}
+
   /*# sourceMappingURL=style.css.map */
