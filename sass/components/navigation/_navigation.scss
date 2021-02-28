@@ -113,9 +113,13 @@ MENU TABLETTE
 		display: none; 
 	}
 
+	.main-navigation.toggled ul,
 	.main-navigation ul {
 		display: flex;
 		position: static;
+		height: 2rem;
+		width: 100vw;
+		align-items:center;
 		justify-content: space-around;
 	}
 }

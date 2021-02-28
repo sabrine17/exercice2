@@ -663,6 +663,10 @@ textarea {
 /*--------------------------------------------------------------
 # Layouts
 --------------------------------------------------------------*/
+.body {
+  overflow-x: hidden;
+}
+
 .no-sidebar .site {
   display: grid;
   grid-template-columns: auto;
@@ -767,9 +771,13 @@ MENU TABLETTE
   .menu-toggle {
     display: none;
   }
+  .main-navigation.toggled ul,
   .main-navigation ul {
     display: flex;
     position: static;
+    height: 2rem;
+    width: 100vw;
+    align-items: center;
     justify-content: space-around;
   }
 }
@@ -1158,7 +1166,7 @@ MENU TABLETTE
   margin-bottom: 1.5em;
 }
 
-/* local
+/* local accueil
 --------------------------------------------- */
 .body.home {
   background-color: fff;
@@ -1210,5 +1218,33 @@ body.home::after {
 .accueil img {
   display: block;
   border-radius: 50%;
+}
+
+/* local caroussel
+--------------------------------------------- */
+.caroussel {
+  display: flex;
+  width: 300vw;
+  height: 20vh;
+  transition: transform .5s;
+}
+
+.caroussel div {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.caroussel div:nth-of-type(1) {
+  background-color: red;
+}
+
+.caroussel div:nth-of-type(2) {
+  background-color: red;
+}
+
+.caroussel div:nth-of-type(3) {
+  background-color: red;
 }
 /*# sourceMappingURL=style.css.map */

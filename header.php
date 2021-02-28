@@ -45,8 +45,20 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-	
-	
+
+		<!-- debut caroussel -->
+		<?php
+		if ( is_front_page() ) : ?>
+	<section class="caroussel">
+	<div>1</div>
+	<div>2</div>
+	<div>3</div>
+	</section>
+	<button id='un'>1</button>
+	<button id='deux'>2</button>
+	<button id='trois'>3</button>	
+		<?php endif ?>
+		<!-- fin caroussel -->
 		<nav id="site-navigation" class="main-navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"> 
 			 <section id="burger">
@@ -93,4 +105,5 @@
             }
         })
 
+		
     </script>
