@@ -544,7 +544,7 @@ a:hover, a:active {
 }
 
 .main-navigation a:visited {
-  color: #8aaceb;
+  color: #43683e;
 }
 
 .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
@@ -564,7 +564,7 @@ a:hover, a:active {
 }
 
 .site-title a:visited {
-  color: #434ea4;
+  color: #43683e;
 }
 
 .site-title a:hover, .site-title a:focus, .site-title a:active {
@@ -692,7 +692,8 @@ textarea {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  background-color: black;
+  background-color: white;
+  opacity: .5;
 }
 
 .main-navigation ul ul {

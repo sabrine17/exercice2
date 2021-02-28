@@ -8,7 +8,8 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
-		background-color: black;
+		background-color: rgb(255, 255, 255);
+		opacity: .5;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -123,6 +124,8 @@ MENU TABLETTE
 		align-items:center;
 		justify-content: space-around;
 	}
+
+	
 }
 
 
