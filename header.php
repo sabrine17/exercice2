@@ -60,11 +60,11 @@
 		<?php endif ?>
 		<!-- fin caroussel -->
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"> 
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" > 
 			 <section id="burger">
-       				<div></div>
-     			   <div></div>
-     			   <div class='ouvrirX3'></div>
+       				<div><img src="eren.png"></div>
+     			   <div><img src="levi.png"></div>
+     			   <div class='ouvrirX3'><img src="mikasa.png"></div>
 				</section>
 	
 </button> 

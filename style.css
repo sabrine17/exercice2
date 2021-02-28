@@ -1237,14 +1237,14 @@ body.home::after {
 }
 
 .caroussel div:nth-of-type(1) {
-  background-color: red;
+  background-color: #8dbde9;
 }
 
 .caroussel div:nth-of-type(2) {
-  background-color: red;
+  background-color: #9900ff;
 }
 
 .caroussel div:nth-of-type(3) {
-  background-color: red;
+  background-color: blue;
 }
 /*# sourceMappingURL=style.css.map */
