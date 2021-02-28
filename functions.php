@@ -136,6 +136,8 @@ function theme_sc_widgets_init() {
 }
 add_action( 'widgets_init', 'theme_sc_widgets_init' );
 
+
+
 /*
 echo "<div>";
 echo filemtime(get_template_directory() . "/style.css");
