@@ -694,6 +694,7 @@ textarea {
   padding-left: 0;
   background-color: white;
   opacity: 1;
+  text-align: left .5s;
 }
 
 .main-navigation ul ul {
@@ -701,8 +702,16 @@ textarea {
   float: left;
   position: absolute;
   top: 100%;
+  transition: left .5s;
   left: -999em;
   z-index: 99999;
+  /*	:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}*/
 }
 
 .main-navigation ul ul ul {
@@ -717,16 +726,20 @@ textarea {
 }
 
 .main-navigation ul ul a {
-  width: 200px;
+  width: 100%;
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-  left: auto;
+  left: 0;
 }
 
 .main-navigation li {
   position: relative;
+  /*
+		&:hover > a,
+		&.focus > a {
+		}*/
 }
 
 .main-navigation a {
@@ -797,6 +810,10 @@ MENU TABLETTE
     height: 50px;
     align-items: center;
     justify-content: space-around;
+  }
+  .main-navigation.toggled ul ul,
+  .main-navigation ul ul {
+    display: none;
   }
   .main-navigation.toggled ul li:hover ul,
   .main-navigation ul li:hover ul {

@@ -10,12 +10,14 @@
 		padding-left: 0;
 		background-color: rgb(255, 255, 255);
 		opacity: 1;
+		text-align: left .5s;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 			float: left;
 			position: absolute;
 			top: 100%;
+			transition: left .5s;
 			left: -999em;
 			z-index: 99999;
 		
@@ -37,30 +39,31 @@
 			}
 
 			a {
-				width: 200px;
+				width: 100%;
 			}
 
-			:hover > a,
+		/*	:hover > a,
 			.focus > a {
 			}
 
 			a:hover,
 			a.focus {
-			}
+			}*/
 		}
 
 		li:hover > ul,
 		li.focus > ul {
-			left: auto;
+			left: 0;
 		}
 	}
 
 	li {
 		position: relative;
-
+		//flex:1;
+		/*
 		&:hover > a,
 		&.focus > a {
-		}
+		}*/
 	}
 
 	a {
@@ -145,10 +148,14 @@ MENU TABLETTE
 		align-items:center;
 		justify-content: space-around;
 
+		ul{
+			display: none;
+		}
 		li:hover ul{
 			display: block;
 			width:200px;
 			height: 450px;
+
 		}
 	}
 
