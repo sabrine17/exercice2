@@ -54,9 +54,11 @@
 	<div></div>
 	<div></div>
 	</section>
+	<div id= 'buttoncaroussel'>
 	<button id='un'>EREN</button>
 	<button id='deux'>LEVI</button>
 	<button id='trois'>MIKASA</button>	
+		</div>
 		<?php endif ?>
 		<!-- fin caroussel -->
 		<nav id="site-navigation" class="main-navigation">

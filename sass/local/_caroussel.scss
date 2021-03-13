@@ -15,22 +15,34 @@ justify-content: center;
 background-color:rgb(141, 189, 233);
 opacity: .5;
 background-image: url(eren.png);
-background-size: 13vw;
+background-size: 18vw;
 
 }
 &:nth-of-type(2){
     background-color:rgb(109, 93, 176);
     opacity: .5;
     background-image: url(levi.png);
-    background-size: 13vw;
+    background-size: 12vw;
 }
 &:nth-of-type(3){
     background-color:blue;
     opacity: .5;
     background-image: url(mikasa.png);
-    background-size: 13vw;
+    background-size: 14vw;
 }
 }
     
 }
 
+#buttoncaroussel
+{
+    display: flex;
+    width: 100vw;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+    
+    
+  
+    
+}
