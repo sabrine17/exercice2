@@ -9,7 +9,7 @@
 		margin: 0;
 		padding-left: 0;
 		background-color: rgb(255, 255, 255);
-		opacity: .5;
+		opacity: 1;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -18,10 +18,12 @@
 			top: 100%;
 			left: -999em;
 			z-index: 99999;
+		
 
 			ul {
 				left: -999em;
 				top: 0;
+				
 			}
 
 			li {
@@ -31,6 +33,7 @@
 					display: block;
 					left: auto;
 				}
+			
 			}
 
 			a {
@@ -82,7 +85,8 @@
 
 .menu-toggle:hover,
 .menu-toggle:focus {
-    background: #f7f8fa;
+	background: #f7f8fa;
+
 }
 
 .menu-toggle:focus {
@@ -101,6 +105,22 @@
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	li{
+		a{
+			&[href="#"]::after{
+				position: absolute;
+				content: "\2B9E";
+				width: 100%;
+				height: 100%;
+				bottom: 0;
+				left:95%;
+				right:0 ;
+			}
+		}
+	}
+	li.focus a[href="#"]::after{
+		content: "2\2B9F";
+	}
 }
 
 
@@ -121,16 +141,19 @@ MENU TABLETTE
 		position: static;
 		height: 2rem;
 		width: 100vw;
+		height:50px;
 		align-items:center;
 		justify-content: space-around;
+
+		li:hover ul{
+			display: block;
+			width:400px;
+			height: 480px;
+		}
 	}
 
 	
 }
-
-
-
-
 
 
 .comment-navigation,
