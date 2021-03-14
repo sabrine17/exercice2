@@ -70,6 +70,7 @@
 				</section>
 	
 </button> 
+
 			<?php
 			wp_nav_menu(
 				array(
@@ -79,6 +80,17 @@
 			);
 			?>
 		</nav><!-- #site-navigation -->
+
+		<!-- debut section image -->
+<?php
+		if ( is_front_page() ) : ?>
+	<section class="imagesection">
+	<div></div>
+	
+	</section>
+	
+		<?php endif ?>
+		<!-- fin section image -->
 	</header><!-- #masthead -->
     <script>
         let burger = document.getElementById('burger')

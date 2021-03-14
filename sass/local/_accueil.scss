@@ -51,3 +51,23 @@ body.home::after{
     }
 }
 
+
+
+.imagesection{
+    display:flex;
+    width: 300vw;
+    height: 50vh;
+    transition: transform .5s;
+    
+
+    div{
+    background-image: url(tokyoGken.jpeg);
+    width: 100vw;
+    height:40vw;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    }
+}
