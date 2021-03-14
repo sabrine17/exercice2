@@ -389,7 +389,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #ffffff;
+  color: #020000;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
@@ -540,15 +540,15 @@ a:hover, a:active {
 }
 
 .main-navigation a {
-  color: #dba3a3;
+  color: #ffffff;
 }
 
 .main-navigation a:visited {
-  color: #413e68;
+  color: #ffffff;
 }
 
 .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
-  color: #cb9d9d;
+  color: #456cd4;
 }
 
 .main-navigation a:focus {
@@ -560,15 +560,15 @@ a:hover, a:active {
 }
 
 .site-title a {
-  color: #203920;
+  color: #456cd4;
 }
 
 .site-title a:visited {
-  color: #486674;
+  color: #456cd4;
 }
 
 .site-title a:hover, .site-title a:focus, .site-title a:active {
-  color: #ffffff;
+  color: #070000;
 }
 
 .site-title a:focus {
@@ -692,13 +692,13 @@ textarea {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  background-color: white;
+  background-color: #070000;
   opacity: 1;
   text-align: left .5s;
 }
 
 .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px #646262;
   float: left;
   position: absolute;
   top: 100%;
@@ -887,17 +887,17 @@ MENU TABLETTE
 }
 
 #burger div:nth-of-type(1) {
-  background-color: #3ddada;
+  background-color: #286e9a;
   clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
 }
 
 #burger div:nth-of-type(2) {
-  background-color: #3d79da;
+  background-color: #740000;
   clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
 }
 
 #burger div:nth-of-type(3) {
-  background-color: #dab03d;
+  background-color: #040300;
   clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
 }
 
@@ -1282,7 +1282,7 @@ body.home::after {
 .caroussel {
   display: flex;
   width: 300vw;
-  height: 20vh;
+  height: 50vh;
   transition: transform .5s;
 }
 
@@ -1294,24 +1294,21 @@ body.home::after {
 }
 
 .caroussel div:nth-of-type(1) {
-  background-color: #8dbde9;
-  opacity: .5;
-  background-image: url(eren.png);
-  background-size: 18vw;
+  background-image: url(backGun.jpeg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .caroussel div:nth-of-type(2) {
-  background-color: #6d5db0;
-  opacity: .5;
-  background-image: url(levi.png);
-  background-size: 12vw;
+  background-image: url(backdeux.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .caroussel div:nth-of-type(3) {
-  background-color: blue;
-  opacity: .5;
-  background-image: url(mikasa.png);
-  background-size: 14vw;
+  background-image: url(backgtrois.jpeg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 #buttoncaroussel {
