@@ -389,7 +389,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #ffffff;
+  color: #020000;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 1rem;
   line-height: 1.5;
@@ -528,7 +528,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-  color: #191970;
+  color: #203920;
 }
 
 a:focus {
@@ -540,15 +540,15 @@ a:hover, a:active {
 }
 
 .main-navigation a {
-  color: #e29b9b;
+  color: #ffffff;
 }
 
 .main-navigation a:visited {
-  color: #8aaceb;
+  color: #ffffff;
 }
 
 .main-navigation a:hover, .main-navigation a:focus, .main-navigation a:active {
-  color: #ffffff;
+  color: #456cd4;
 }
 
 .main-navigation a:focus {
@@ -560,15 +560,15 @@ a:hover, a:active {
 }
 
 .site-title a {
-  color: #061a5c;
+  color: #456cd4;
 }
 
 .site-title a:visited {
-  color: #000002;
+  color: #4f6297;
 }
 
 .site-title a:hover, .site-title a:focus, .site-title a:active {
-  color: #ffffff;
+  color: #070000;
 }
 
 .site-title a:focus {
@@ -692,16 +692,26 @@ textarea {
   list-style: none;
   margin: 0;
   padding-left: 0;
-  background-color: black;
+  background-color: #070000;
+  opacity: 1;
+  text-align: left .5s;
 }
 
 .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 3px #646262;
   float: left;
   position: absolute;
   top: 100%;
+  transition: left .5s;
   left: -999em;
   z-index: 99999;
+  /*	:hover > a,
+			.focus > a {
+			}
+
+			a:hover,
+			a.focus {
+			}*/
 }
 
 .main-navigation ul ul ul {
@@ -716,19 +726,35 @@ textarea {
 }
 
 .main-navigation ul ul a {
-  width: 200px;
+  width: 100%;
 }
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
-  left: auto;
+  left: 0;
 }
 
 .main-navigation li {
   position: relative;
 }
 
-.main-navigation a {
+.main-navigation a[href='#']::after {
+  position: absolute;
+  content: "+";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+}
+
+.main-navigation li.focus a[href='#']::after,
+.main-navigation a[href='#']:hover::after {
+  content: "-";
+}
+
+a {
   display: block;
   text-decoration: none;
 }
@@ -764,6 +790,21 @@ textarea {
   display: block;
 }
 
+.menu-toggle li a[href="#"]::after,
+.main-navigation.toggled ul li a[href="#"]::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 95%;
+  right: 0;
+}
+
+.menu-toggle li.focus a[href="#"]::after,
+.main-navigation.toggled ul li.focus a[href="#"]::after {
+  content: "2\2B9F";
+}
+
 /*-------------------------------------------
 MENU TABLETTE
 --------------------------------------------*/
@@ -777,8 +818,39 @@ MENU TABLETTE
     position: static;
     height: 2rem;
     width: 100vw;
+    height: 50px;
     align-items: center;
     justify-content: space-around;
+  }
+  .main-navigation.toggled ul a[href='#']::after,
+  .main-navigation ul a[href='#']::after {
+    display: none;
+  }
+  .main-navigation.toggled ul li:hover ul,
+  .main-navigation ul li:hover ul {
+    display: block;
+    width: 200px;
+    height: 450px;
+  }
+  .main-navigation.toggled ul ul,
+  .main-navigation ul ul {
+    display: none;
+    width: 400px;
+  }
+  .menu-toggle {
+    display: none;
+  }
+  .line {
+    display: none;
+  }
+  .line1 {
+    display: none;
+  }
+  .line2 {
+    display: none;
+  }
+  .line3 {
+    display: none;
   }
 }
 
@@ -813,122 +885,52 @@ MENU TABLETTE
 /*---------------------------------------------------------------------------------------
   Le bouton buger
   ----------------------------------------------------------------------------------------- */
-#burger {
-  position: relative;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  overflow: hidden;
+.menu-toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
 }
 
-#burger div {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 6;
+  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#burger div:nth-of-type(1) {
-  background-color: #3ddada;
-  clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
 }
 
-#burger div:nth-of-type(2) {
-  background-color: #3d79da;
-  clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
 }
 
-#burger div:nth-of-type(3) {
-  background-color: #dab03d;
-  clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
 }
 
-/* -----------------------------------------------------------------------------------
-  La barre du haut
-  -------------------------------------------------------------------------------------- */
-@keyframes ouvreX1 {
-  0% {
-    clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
-  }
-  100% {
-    clip-path: polygon(8% -8%, 108% 92%, 92% 108%, -8% 8%);
-  }
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
 }
 
-@keyframes fermeX1 {
-  0% {
-    clip-path: polygon(8% -8%, 108% 92%, 92% 108%, -8% 8%);
-  }
-  100% {
-    clip-path: polygon(0 20%, 100% 20%, 100% 30%, 0 30%);
-  }
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
 }
 
-.ouvreX1 {
-  animation: ouvreX1 0.1s both;
-}
-
-.fermeX1 {
-  animation: fermeX1 0.1s both;
-}
-
-/* -----------------------------------------------------------------------------------
-  La barre du bas
-  -------------------------------------------------------------------------------------- */
-@keyframes ouvreX3 {
-  0% {
-    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-  }
-  100% {
-    clip-path: polygon(-8% 92%, 92% -8%, 108% 8%, 8% 108%);
-  }
-}
-
-@keyframes fermeX3 {
-  0% {
-    clip-path: polygon(-4% 96%, 96% -4%, 104% 4%, 4% 104%);
-  }
-  100% {
-    clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
-  }
-}
-
-.ouvreX3 {
-  animation: ouvreX3 0.1s both;
-}
-
-.fermeX3 {
-  animation: fermeX3 0.1s both;
-}
-
-/* -----------------------------------------------------------------------------------
-  La barre du millieu
-  -------------------------------------------------------------------------------------- */
-@keyframes ouvreX2 {
-  0% {
-    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
-  }
-  100% {
-    clip-path: polygon(48% 48%, 52% 48%, 52% 52%, 48% 52%);
-  }
-}
-
-@keyframes fermeX2 {
-  0% {
-    clip-path: polygon(48% 48%, 52% 48%, 52% 52%, 48% 52%);
-  }
-  100% {
-    clip-path: polygon(0 45%, 100% 45%, 100% 55%, 0 55%);
-  }
-}
-
-.ouvreX2 {
-  animation: ouvreX2 0.1s both;
-}
-
-.fermeX2 {
-  animation: fermeX2 0.1s both;
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
 }
 
 /*--------------------ANIMATION TITRE -------------------------*/
@@ -1169,7 +1171,7 @@ MENU TABLETTE
 /* local accueil
 --------------------------------------------- */
 .body.home {
-  background-color: fff;
+  background-color: #fff;
   height: 100vh;
   width: 100vw;
 }
@@ -1195,7 +1197,7 @@ body.home::after {
 
 .site-title {
   font-size: clamp(1.2rem, -0.875rem + 8.333vw, 7rem);
-  font-family: "montserrat", monospace;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: bold;
   margin-bottom: 0;
 }
@@ -1206,7 +1208,7 @@ body.home::after {
 
 .site-description {
   font-size: clamp(1.2rem, -0.875rem + 8.333vw, 3rem);
-  font-family: "montserrat", monospace;
+  font-family: "Josefin Sans", sans-serif;
   font-weight: normal;
 }
 
@@ -1220,12 +1222,30 @@ body.home::after {
   border-radius: 50%;
 }
 
+.imagesection {
+  display: flex;
+  width: 300vw;
+  height: 50vh;
+  transition: transform .5s;
+}
+
+.imagesection div {
+  background-image: url(tokyoGken.jpeg);
+  width: 100vw;
+  height: 40vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 /* local caroussel
 --------------------------------------------- */
 .caroussel {
   display: flex;
   width: 300vw;
-  height: 20vh;
+  height: 50vh;
   transition: transform .5s;
 }
 
@@ -1237,23 +1257,28 @@ body.home::after {
 }
 
 .caroussel div:nth-of-type(1) {
-  background-color: #8dbde9;
-  opacity: .5;
-  background-image: url(eren.png);
-  background-size: 13vw;
+  background-image: url(ken2.jpeg);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .caroussel div:nth-of-type(2) {
-  background-color: #6d5db0;
-  opacity: .5;
-  background-image: url(levi.png);
-  background-size: 13vw;
+  background-image: url(keneki.gif);
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .caroussel div:nth-of-type(3) {
-  background-color: blue;
-  opacity: .5;
-  background-image: url(mikasa.png);
-  background-size: 13vw;
+  background-image: url(kaneki.gif);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#buttoncaroussel {
+  display: flex;
+  width: 100vw;
+  margin: 20px;
+  justify-content: center;
+  align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
