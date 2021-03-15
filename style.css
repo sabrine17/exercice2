@@ -837,9 +837,7 @@ MENU TABLETTE
     display: none;
     width: 400px;
   }
-  .essai {
-    display: block;
-  }
+  /* essai */
   .menu-toggle {
     display: none;
   }
