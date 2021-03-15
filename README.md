@@ -3,9 +3,9 @@
 
 
 Lien répertoire  git
-https://github.com/sabrine17/exercice2.git
+https://github.com/sabrine17/labo4.git
 
 
 Lien site git hub
-https://sabrine17.github.io/exercice2/
+https://sabrine17.github.io/labo4/
 
