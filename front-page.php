@@ -11,7 +11,8 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
+	
+	
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
@@ -23,7 +24,7 @@ get_header();
             <section class="cours">
 			<?php
 			/* Start the Loop */
-			$precedant = 0;
+			$precedant = "XXXXX";
 			while ( have_posts() ) :
             the_post();
             $titre = get_the_title();
@@ -36,10 +37,19 @@ get_header();
             //$resume = substr($contenu, 0, 200);
             $typeCours = get_field('type_de_cours');
 		
-                ?>
-                
+            if($typeCours !=  $precedant):
+			if("XXXXXX" != $precedant): ?>
+
+		</section>
+		<?php endif ?>
+		<h2><?php echo $typeCours ?></h2>
+		<!-- Debut section cours -->
+		<section>
+			<?php endif ?>
+
+
                 <article>
-                    <p><?php echo $sigle . "-" . $typeCours; ?></p>
+                    <p><?php echo $sigle . " - " . $typeCours . " - " . $nbHeure; ?></p>
                     <a href ="<?php echo get_permalink() ?>"><?php echo $titrePartiel; ?></a>
                     <p>Session : <?php echo $session; ?></p>
             
@@ -47,7 +57,9 @@ get_header();
 
 			
 		
-			<?php endwhile;?>
+			<?php
+			$precedant = $typeCours;
+			endwhile;?>
             </section> <!-- fin de section cours -->
 			<?php endif;?>
 

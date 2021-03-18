@@ -45,9 +45,8 @@
 			<?php endif; ?>
 		</div><!-- .site-branding -->
 
-
-		<!-- debut caroussel -->
-		<?php
+	<!-- debut caroussel -->
+	<?php
 		if ( is_front_page() ) : ?>
 	<section class="caroussel">
 	<div></div>
@@ -61,6 +60,7 @@
 		</div>
 		<?php endif ?>
 		<!-- fin caroussel -->
+
 		<nav id="site-navigation" class="main-navigation">
 		<!-- section burger -->
 		

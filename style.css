@@ -883,7 +883,7 @@ MENU TABLETTE
   Les variables 
   ---------------------------------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------
-  Le bouton buger
+  Le bouton burger
   ----------------------------------------------------------------------------------------- */
 .menu-toggle {
   background-color: transparent;
@@ -1180,7 +1180,7 @@ body.home::after {
   content: "";
   position: absolute;
   width: 100%;
-  height: 200%;
+  height: 500vh;
   top: 0;
   bottom: 0;
   left: 0;
@@ -1216,28 +1216,52 @@ body.home::after {
   font-size: clamp(1.2rem, -0.875rem + 8.333vw, 3rem);
 }
 
+/*--------- LISTES DES BLOCS DE COURS PAR TYPE_DE_COURS -------*/
 .home .cours {
   display: flex;
   flex-direction: column;
 }
 
-.home .cours article {
+.home .cours section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.home .cours section article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #aaa;
+  width: 90%;
+  margin: 1%;
+  background-color: red;
 }
 
-.home .cours article p {
-  margin: .3rem;
+.home .cours section article p {
+  margin: .4rem;
   font-size: 1rem;
 }
 
-.home .cours article a {
-  font-size: 2rem;
+.home .cours section article a {
+  font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
+}
+
+@media (min-width: 800px) {
+  .home .cours section article {
+    width: 45%;
+    margin: 1%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .home .cours section article {
+    width: 29%;
+    margin: 1%;
+  }
 }
 
 .accueil ul {

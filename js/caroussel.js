@@ -1,7 +1,7 @@
-        
+
         
         (function(){
-        
+       
         let bout1 =document.getElementById('un');
 		console.log(bout1.id);
 		let bout2 =document.getElementById('deux');
