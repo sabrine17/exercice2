@@ -524,11 +524,11 @@ a {
 }
 
 a:visited {
-  color: #800080;
+  color: #070000;
 }
 
 a:hover, a:focus, a:active {
-  color: #203920;
+  color: #650505;
 }
 
 a:focus {
@@ -759,6 +759,11 @@ a {
   text-decoration: none;
 }
 
+/*.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}*/
 /* Small menu. */
 .menu-toggle {
   padding: 0;
@@ -1188,7 +1193,7 @@ body.home::after {
   z-index: -1;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 800px), (max-width: 1200px) {
   body.home::after {
     clip-path: polygon(90% 0, 100% 0, 100% 100%, 80% 100%);
     background-color: white;
@@ -1217,53 +1222,92 @@ body.home::after {
 }
 
 /*--------- LISTES DES BLOCS DE COURS PAR TYPE_DE_COURS -------*/
-.home .cours {
-  display: flex;
-  flex-direction: column;
-}
-
-.home .cours section {
+section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
-.home .cours section article {
+section article {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  width: 10%;
   border: 1px solid #aaa;
-  width: 90%;
-  margin: 1%;
-  background-color: red;
+  margin: .5%;
 }
 
-.home .cours section article p {
-  margin: .4rem;
+section article p {
+  margin: .7rem;
   font-size: 1rem;
+  font-weight: bold;
+  color: #070707;
 }
 
-.home .cours section article a {
-  font-size: 1.5rem;
+section article a {
+  font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
+  color: black;
 }
 
-@media (min-width: 800px) {
-  .home .cours section article {
-    width: 45%;
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 800px), (max-width: 1200px) {
+  article {
+    width: 20%;
     margin: 1%;
+    background-image: url(imgBackArticle.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  article p {
+    margin: .7rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #460404;
+  }
+  article a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
   }
 }
 
 @media (min-width: 1200px) {
-  .home .cours section article {
-    width: 29%;
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(imageBackArticle3.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 20%;
     margin: 1%;
+  }
+  article p {
+    margin: .7rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #460404;
+  }
+  article a {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
   }
 }
 
+/*------------------ FIN SECTION COURS -------------------*/
 .accueil ul {
   list-style-type: none;
   font-size: clamp(1.2rem, -0.875rem + 8.333vw, 3rem);
@@ -1290,6 +1334,23 @@ body.home::after {
   justify-content: center;
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+/*------------ SECTION FOOTER ---------*/
+.footer {
+  display: flex;
+  background-color: black;
+  width: 100%;
+  height: 10vw;
+  margin-top: 20vw;
+  color: white;
+}
+
+.footer h2 {
+  justify-content: center;
+  margin: 0;
+  font-size: 2em;
+  align-items: center;
 }
 
 /* local caroussel

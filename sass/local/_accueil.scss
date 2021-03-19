@@ -43,54 +43,112 @@ body.home::after{
     font-size: clamp(1.2rem, #{"-0.875rem + 8.333vw"}, 3rem);
 }
 /*--------- LISTES DES BLOCS DE COURS PAR TYPE_DE_COURS -------*/
-.home .cours{
-    display:flex;
-    flex-direction: column;
-    
-    
-    section {
+
+
+    section{
        
         display:flex;
         flex-direction: row;
         flex-wrap: wrap;
+
 
     article{
         display:flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
+        width: 10%;
         border : 1px solid #aaa;
-        width: 90%;
-        margin: 1%;
-        background-color: red;
+        margin: .5%;
+      
         
-  
         p{
-            margin: .4rem;
+            margin: .7rem;
             font-size: 1rem;
+            font-weight: bold;
+            color:rgb(7, 7, 7);
         }
         a{
-            font-size: 1.5rem;
+            font-size: 1rem;
             font-weight: bold;
             text-decoration: none;
+            color:black;
         }
-    }
-    @include tablet{
-        article{
-            width: 45%;
+    } //fin article
+  
+}
+ 
+ // article en mode tablette
+        article
+        {
+
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            @include tablet{
+         
+            width: 20%;
             margin:1%;
+            background-image: url(imgBackArticle.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+ 
+            p{
+                margin: .7rem;
+                font-size: 1rem;
+                font-weight: bold;
+                color:rgb(70, 4, 4);
+            }
+            a{
+                font-size: 1.5rem;
+                font-weight: bold;
+                text-decoration: none;
+                color:black;
+            }
+        
         }
     }
     
-    @include desktop{
-       
+    
+     
+// article en mode desktop
         article{
-            width: 29%;
+            @include desktop
+            {
+            display:flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-image: url(imageBackArticle3.jpeg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            width: 20%;
             margin:1%;
+            p{
+                margin: .7rem;
+                font-size: 1rem;
+                font-weight: bold;
+                color:rgb(70, 4, 4);
+            }
+            a{
+                font-size: 2rem;
+                font-weight: bold;
+                text-decoration: none;
+                color:black;
+            }
+      
+            }
         }
-    }
-    }
-}
+            
+      
+    
+
+
+
+/*------------------ FIN SECTION COURS -------------------*/
+
+
 
 .accueil{
     ul{
@@ -122,6 +180,25 @@ body.home::after{
     justify-content: center;
     background-size: 100%;
     background-repeat: no-repeat;
+    }
+}
+
+/*------------ SECTION FOOTER ---------*/
+.footer{
+    display: flex;
+ 
+    background-color: black;
+    width: 100%;
+    height:10vw;
+    margin-top: 20vw;
+    
+    color: white;
+  
+    h2{
+        justify-content: center;
+        margin: 0;
+        font-size: 2em;
+        align-items: center;
     }
 }
 

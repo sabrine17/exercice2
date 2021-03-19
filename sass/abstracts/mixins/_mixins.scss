@@ -11,12 +11,13 @@
 }
 
 
+// format tablette
 @mixin tablet{
-	@media(min-width: 800px){
+	@media(min-width: 800px),( max-width: 1200px){
 		@content;
 	}
 }
-
+// format desktop
 @mixin desktop{
 	@media(min-width: 1200px){
 		@content;

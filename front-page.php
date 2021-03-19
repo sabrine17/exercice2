@@ -21,33 +21,31 @@ get_header();
 				the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
-            <section class="cours">
+
+			<!-- SECTION COURS -->
+            <section class="cours"> </section>
 			<?php
 			/* Start the Loop */
-			$precedant = "XXXXX";
+			$precedent = "XXXXX";
 			while ( have_posts() ) :
-            the_post();
+			the_post();
+			// 582-1W1- Mise en page Web (75h)
             $titre = get_the_title();
-            // 582-1W1- Mise en page Web (75h)
             $sigle = substr($titre, 0, 7);
             $nbHeure = substr($titre, -4, 3);
             $titrePartiel = substr($titre,8, -6);
 			$session = substr($titre,4,1);
-			//$contenu = get_the_content();
-            //$resume = substr($contenu, 0, 200);
             $typeCours = get_field('type_de_cours');
+			if($typeCours !=  $precedent):
+			if(  "XXXXXX" != $precedent) : ?>
+			</section>
+			<?php endif; ?>
+			<h2><?php echo $typeCours ?></h2>
+		<section> <!-- fin de section cours -->
+			<?php endif; ?>
 		
-            if($typeCours !=  $precedant):
-			if("XXXXXX" != $precedant): ?>
-
-		</section>
-		<?php endif ?>
-		<h2><?php echo $typeCours ?></h2>
-		<!-- Debut section cours -->
-		<section>
-			<?php endif ?>
-
-
+		
+		
                 <article>
                     <p><?php echo $sigle . " - " . $typeCours . " - " . $nbHeure; ?></p>
                     <a href ="<?php echo get_permalink() ?>"><?php echo $titrePartiel; ?></a>
@@ -58,11 +56,11 @@ get_header();
 			
 		
 			<?php
-			$precedant = $typeCours;
-			endwhile;?>
-            </section> <!-- fin de section cours -->
-			<?php endif;?>
-
+			$precedent = $typeCours;
+			endwhile;
+ 
+			 endif;?>
+  
 	</main><!-- #main -->
 
 <?php
