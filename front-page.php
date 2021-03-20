@@ -23,10 +23,10 @@ get_header();
 			</header><!-- .page-header -->
 
 			<!-- SECTION COURS -->
-            <section class="cours"> </section>
+            <section class="cours"> 
 			<?php
 			/* Start the Loop */
-			$precedent = "XXXXX";
+			$precedent = "XXXXXX";
 			while ( have_posts() ) :
 			the_post();
 			// 582-1W1- Mise en page Web (75h)
@@ -57,9 +57,9 @@ get_header();
 		
 			<?php
 			$precedent = $typeCours;
-			endwhile;
- 
-			 endif;?>
+			endwhile;?>
+ 			</section>
+			<?php endif;?>
   
 	</main><!-- #main -->
 

@@ -11,9 +11,17 @@
 }
 
 
+
+//format mobile
+@mixin mobile{
+	@media (max-width: 654px){
+		@content;
+	}
+}
+
 // format tablette
 @mixin tablet{
-	@media(min-width: 800px),( max-width: 1200px){
+	@media (min-width: 800px),( max-width: 1200px){
 		@content;
 	}
 }
