@@ -524,11 +524,11 @@ a {
 }
 
 a:visited {
-  color: #800080;
+  color: #070000;
 }
 
 a:hover, a:focus, a:active {
-  color: #203920;
+  color: #650505;
 }
 
 a:focus {
@@ -705,13 +705,6 @@ textarea {
   transition: left .5s;
   left: -999em;
   z-index: 99999;
-  /*	:hover > a,
-			.focus > a {
-			}
-
-			a:hover,
-			a.focus {
-			}*/
 }
 
 .main-navigation ul ul ul {
@@ -759,6 +752,11 @@ a {
   text-decoration: none;
 }
 
+/*.current_page_item > a,
+	.current-menu-item > a,
+	.current_page_ancestor > a,
+	.current-menu-ancestor > a {
+	}*/
 /* Small menu. */
 .menu-toggle {
   padding: 0;
@@ -883,7 +881,7 @@ MENU TABLETTE
   Les variables 
   ---------------------------------------------------------------------------------------- */
 /*---------------------------------------------------------------------------------------
-  Le bouton buger
+  Le bouton burger
   ----------------------------------------------------------------------------------------- */
 .menu-toggle {
   background-color: transparent;
@@ -1179,8 +1177,8 @@ MENU TABLETTE
 body.home::after {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 200%;
+  width: 100vw;
+  height: 500vh;
   top: 0;
   bottom: 0;
   left: 0;
@@ -1188,7 +1186,7 @@ body.home::after {
   z-index: -1;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px), (max-width: 1280px) {
   body.home::after {
     clip-path: polygon(90% 0, 100% 0, 100% 100%, 80% 100%);
     background-color: white;
@@ -1207,11 +1205,134 @@ body.home::after {
 }
 
 .site-description {
-  font-size: clamp(1.2rem, -0.875rem + 8.333vw, 3rem);
+  font-size: clamp(1.2rem, -0.875rem + 8.333vw, 1.5rem);
   font-family: "Josefin Sans", sans-serif;
   font-weight: normal;
 }
 
+.home .entry-header {
+  font-size: clamp(1.2rem, -0.875rem + 8.333vw, 3rem);
+}
+
+/*--------- LISTES DES BLOCS DE COURS PAR TYPE_DE_COURS -------*/
+.home .cours {
+  display: flex;
+  flex-direction: column;
+}
+
+.home .cours section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 35%;
+}
+
+.home .cours section article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 10%;
+  border: 1px solid #aaa;
+  margin: .5%;
+}
+
+.home .cours section article p {
+  margin: .7rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #070707;
+}
+
+.home .cours section article a {
+  display: block;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+@media (min-width: 100px), (max-width: 600px) {
+  .home .cours section article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 1%;
+    background-image: url(ken3.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-image: hidden;
+  }
+  .home .cours section article p {
+    margin: .7rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00ff40;
+  }
+  .home .cours section article a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+@media (min-width: 600px), (max-width: 1280px) {
+  .home .cours section article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 45%;
+    margin: 1%;
+    background-image: url(imgBackArticle.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
+  .home .cours section article p {
+    margin: .7rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #460404;
+  }
+  .home .cours section article a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+@media (min-width: 1280px) {
+  .home .cours section article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url(tokyoGk.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 29%;
+    margin: 1%;
+  }
+  .home .cours section article p {
+    margin: .7rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #460404;
+  }
+  .home .cours section article a {
+    font-size: 2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+/*------------------ FIN SECTION COURS -------------------*/
 .accueil ul {
   list-style-type: none;
   font-size: clamp(1.2rem, -0.875rem + 8.333vw, 3rem);
@@ -1238,6 +1359,23 @@ body.home::after {
   justify-content: center;
   background-size: 100%;
   background-repeat: no-repeat;
+}
+
+/*------------ SECTION FOOTER ---------*/
+.footer {
+  display: flex;
+  background-color: black;
+  width: 100%;
+  height: 10vw;
+  margin-top: 20vw;
+  color: white;
+}
+
+.footer h2 {
+  justify-content: center;
+  margin: 0;
+  font-size: 2em;
+  align-items: center;
 }
 
 /* local caroussel

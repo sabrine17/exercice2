@@ -10,10 +10,9 @@ voulais adapter mon site avec des images d'animes pour cibler une clientèle plu
 
 Le titre de mon site : TIM 
 
-Lien répertoire  git du tp1
-https://github.com/sabrine17/exercice2.git
-
+Lien répertoire  git du tp1:
+https://github.com/sabrine17/tp1.git
 
 Lien site git hub du tp1
-https://sabrine17.github.io/exercice2/
+https://sabrine17.github.io/tp1/
 
