@@ -157,9 +157,11 @@ function theme_sc_scripts() {
 	wp_register_script( 'theme-sc-caroussel', get_template_directory_uri() . '/js/caroussel.js', array(), _S_VERSION, true );
 	wp_enqueue_script( 'theme-sc-caroussel');
 
-
+	wp_register_script( 'theme-sc-slider', get_template_directory_uri() . '/js/slider.js', array(), filemtime(get_template_directory() . "/js/slider.js") ,true );
+	
 	if ( is_front_page()){
 		wp_enqueue_script( 'theme-sc-caroussel');
+		wp_enqueue_script( 'theme-sc-slider');
 	}
 
 
@@ -221,6 +223,8 @@ function extraire_cours_front_page($query){
 	$query->set('meta_key', 'type_de_cours' );
 	$query->set('orderby', array('meta_value' => 'DESC','title' => 'ASC' ));
 	
+
+	$query->set('posts_per_page', -1);
 }
 }
 add_action('pre_get_posts','extraire_cours_front_page');
