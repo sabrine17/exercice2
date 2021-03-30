@@ -1,4 +1,4 @@
-# tp1 
+# labo6
 
 Auteur: Sabrine Cheurfa
 
@@ -10,9 +10,12 @@ voulais adapter mon site avec des images d'animes pour cibler une clientèle plu
 
 Le titre de mon site : TIM 
 
-Lien répertoire  git du tp1:
-https://github.com/sabrine17/tp1.git
+Lien répertoire  git du labo 6:
+https://github.com/sabrine17/labo6.git
 
-Lien site git hub du tp1
-https://sabrine17.github.io/tp1/
+Lien site git hub du labo 6
+https://sabrine17.github.io/labo6/
+
+Lien du site webdev
+https://e1648488.webdev.cmaisonneuve.qc.ca/design/projetsession/
 
