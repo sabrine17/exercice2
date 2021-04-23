@@ -1,4 +1,4 @@
-# labo6
+# exerice 3
 
 Auteur: Sabrine Cheurfa
 
